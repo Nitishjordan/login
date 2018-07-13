@@ -1,0 +1,16 @@
+body
+{
+	position: absolute;
+	font-family:sans-serif;
+	color:white;
+	
+	
+}
+.outer
+{
+height:480px;
+width:300px;
+background-color:black;
+color:white;
+
+}

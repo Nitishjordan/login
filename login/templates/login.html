@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> login</title>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static '/style.css' %}">
+</head>
+<body background="{% static '/sign.jpg' %}">
+	<div class="loginbox">
+	<img src="{% static '/profile_avatar_25.jpg' %}" class="avatar">
+		<h1>LOGIN HERE</h1><br>
+		<form action="{% url 'check' %}">
+			<p>User Name:</p><br>
+			<input type="text" name="username" placeholder="Enter user name"><br><br>
+			<p>Password:</p><br>
+			<input type="password" name="password" placeholder="Enter password"><br><br>
+			<input type="submit" name="" value="Login"><br><br>
+			
+			
+			<a href="{% url 'register' %}">Signup</a>
+		</form>
+	</div>
+
+</body>
+
+</html>

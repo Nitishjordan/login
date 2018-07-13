@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>REGISTRATION</title>
+<style>
+#body
+{
+	position: absolute;
+	font-family:sans-serif;
+	color:white;
+	
+	
+}
+#outer
+{
+height:480px;
+width:320px;
+background-color:grey;
+color:black;
+margin:0px auto;
+top:25%;
+left:50%;
+position:absolute;
+border-radius:10px;
+font-size:15px;
+font-family:sans-serif;
+
+}
+#outer form 
+{
+margin:1px auto;
+position:absolute;
+left:3px;
+top:40px;
+	
+}
+#outer h1
+{
+	font-size:20px;
+	font-family:algerian;
+	color:light orange;
+	position:absolute;
+	top:10%;
+	left:25%;
+}
+#outer img
+{
+	width:120px;
+	height:120px;
+	border-radius:60px 60px 60px 60px;
+	position:absolute;
+	left:calc(50% - 60px);
+	top:-60px;
+}
+#outer button
+{
+	width:300px;
+	position:absolute;
+	left:5px;
+	
+	height:40px;
+	border-radius:10px;
+	background-color:grey;
+	font-family:sans-serif;
+	font-size:15px;
+	margin:5px auto;
+	
+}
+#left
+{
+	height:480px;
+	width:320px;
+	background:transparent;
+	
+}
+
+#left img
+{
+height:480px;
+width:320px;
+position:absolute;
+top:25%;
+left:10px;
+}
+</style>
+</head>
+{% load staticfiles %}
+<body background="{% static 'back.jpg' %}">
+<div id="left"> <img src="{% static 'images2.jpg' %}"></div>
+<div id="outer">
+	<img src="{% static 'image.jpg' %}" > 
+	<h1>REGISTER HERE</h1>
+	<form action="{% url 'register' %}" method="POST"> 
+	<br>
+	<br>{% csrf_token %}
+		<p style="color:white font-size:20px top:2px">
+			{{form.as_p}}
+		<button type="submit">REGISTER </button>
+	
+	</form>
+</div>
+</body>
+</html>
